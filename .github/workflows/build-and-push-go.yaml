@@ -29,6 +29,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: ./vllm-simple-performance/performance
-          tag_name: ${{ github.event.release.tag_name }}
+          tag_name: ${{ github.ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

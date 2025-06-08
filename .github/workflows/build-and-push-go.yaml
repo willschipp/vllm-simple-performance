@@ -28,5 +28,5 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          files: ./vllm-simple-performance/performance
+          path: ./vllm-simple-performance/performance
           name: performance

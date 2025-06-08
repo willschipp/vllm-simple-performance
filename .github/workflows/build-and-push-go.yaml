@@ -27,9 +27,8 @@ jobs:
 
       - name: Upload
         uses: softprops/action-gh-release@v1
-        working-directory: ./vllm-simple-performance
         with:
-          files: ./performance
+          files: ./vllm-simple-performance/performance
           tag_name: ${{ github.event.release.tag_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

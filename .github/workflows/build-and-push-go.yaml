@@ -26,9 +26,7 @@ jobs:
         run: go build -o performance ./cmd/performance
 
       - name: Upload
-        uses: softprops/action-gh-release@v1
+        uses: actions/upload-artifact@v4
         with:
           files: ./vllm-simple-performance/performance
-          tag_name: ${{ github.ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: performance
